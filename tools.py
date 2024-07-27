@@ -19,7 +19,7 @@ tryRandomNTool = {
                     "description": "How many numbers should be calculated",
                 }
             },
-            "required": ["location"],
+            "required": ["min", "max", "count"],
         }
     }
 }
