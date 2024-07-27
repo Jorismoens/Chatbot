@@ -8,11 +8,11 @@ tryRandomNTool = {
             "properties": {
                 "min": {
                     "type": "integer",
-                    "description": "The generated numbers will be greater than this",
+                    "description": "Lower bound on the generated number",
                 },
                 "max": {
                     "type": "integer",
-                    "description": "The generated numbers will be smaller than this",
+                    "description": "Upper bound on the generated number",
                 },
                 "count": {
                     "type": "integer",
