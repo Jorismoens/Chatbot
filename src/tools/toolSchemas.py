@@ -1,4 +1,4 @@
-tryRandomNTool = {
+randomNumbersTool = {
     "type": "function",
     "function": {
         "name": "get_random_numbers",

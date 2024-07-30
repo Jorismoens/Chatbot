@@ -47,6 +47,8 @@ def handle_tool_response(client: OpenAI, completion: ChatCompletion, messages: l
 
             return response_with_function_call.choices[0].message.content
 
-    else:
-        # Model did not identify a function to call, hand the response message to the user
-        return completion.choices[0].message.content
+        else:
+            return "error: function call defined by model does not exist"
+
+    # Model did not identify a function to call, hand the response message to the user
+    return completion.choices[0].message.content

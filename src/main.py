@@ -1,10 +1,10 @@
 from prompts import PROMPTS
 from src.callAsistant import callAsistantWithTools
-from src.tools.toolSchemas import tryRandomNTool, temperatureTool
+from src.tools.toolSchemas import randomNumbersTool, temperatureTool
 
 # Provide the model with helper functions to ask the temperature and to generate random numbers
 tools = [
-    tryRandomNTool,
+    randomNumbersTool,
     temperatureTool
 ]
 

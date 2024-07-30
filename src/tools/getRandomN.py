@@ -4,7 +4,7 @@ import requests
 from requests import Response
 
 
-def get_random_numbers(min: int, max: int, count: int):
+def get_random_numbers(min: int, max: int, count: int) -> str:
     url = "http://www.randomnumberapi.com/api/v1.0/random"
     params = {
         'min': min,

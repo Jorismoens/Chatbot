@@ -17,4 +17,3 @@ def callAsistantWithTools(tools, role: string, prompt: string) -> string:
         tool_choice="auto"
     )
     return handle_tool_response(client, completion, messages)
-# Dit los trekken? Is een brei nu
