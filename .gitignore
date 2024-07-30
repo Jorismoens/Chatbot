@@ -3,3 +3,6 @@
 /wishlist.txt
 /__pycache__/
 .idea/
+/test/openmeteo_test.py
+/test/.cache.sqlite
+/src/.cache.sqlite

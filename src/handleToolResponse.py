@@ -4,8 +4,8 @@ import string
 from openai import OpenAI
 from openai.types.chat import ChatCompletion
 
-from callWeather import get_temperature
-from getRandomN import get_random_numbers
+from src.tools.callWeather import get_temperature
+from src.tools.getRandomN import get_random_numbers
 
 
 def handle_tool_response(client: OpenAI, completion: ChatCompletion, messages: list[dict[str, str]]) -> string:

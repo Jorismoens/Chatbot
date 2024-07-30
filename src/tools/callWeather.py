@@ -6,7 +6,7 @@ import requests_cache
 
 
 def get_temperature(latitude: float, longitude: float) -> float:
-	global url, params, response, value
+	global url, params, response, value # TODO remove of refactor this line
 	# Set up the Open-Meteo API client with cache and retry on error
 	cache_session = requests_cache.CachedSession('.cache', expire_after=3600)
 	# retry_session = retry(cache_session, retries = 5, backoff_factor = 0.2)
