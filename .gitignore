@@ -6,3 +6,6 @@
 /test/openmeteo_test.py
 /test/.cache.sqlite
 /src/.cache.sqlite
+/src/__pycache__/
+src/tools/__pycache__/
+test/__pycache__/
