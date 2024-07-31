@@ -4,6 +4,7 @@ import requests
 from requests import Response
 
 
+# Use randomnumber API to get a series of random numbers
 def get_random_numbers(min: int, max: int, count: int) -> str:
     url = "http://www.randomnumberapi.com/api/v1.0/random"
     params = {

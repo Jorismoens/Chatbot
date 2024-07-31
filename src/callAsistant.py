@@ -10,6 +10,9 @@ def callAsistantWithTools(tools, role: string, prompt: string) -> string:
         {"role": "user", "content": prompt}
     ]
     client = OpenAI()
+
+    # Call the LLM with the prompt, role and a collection of tools it can use to answer the prompt. The model will
+    # decide which tool will be used in which situation
     completion = client.chat.completions.create(
         model="gpt-4o-mini",
         messages=messages,

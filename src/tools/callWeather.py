@@ -5,11 +5,9 @@ import openmeteo_requests
 import requests_cache
 
 
-def get_temperature(latitude: float, longitude: float) -> float:
-	global url, params, response, value # TODO remove of refactor this line
-	# Set up the Open-Meteo API client with cache and retry on error
+# Call the openmeteo weather API to retrieve the temperature for a specific location.
+def get_temperature(latitude: float, longitude: float) -> str:
 	cache_session = requests_cache.CachedSession('.cache', expire_after=3600)
-	# retry_session = retry(cache_session, retries = 5, backoff_factor = 0.2)
 	openmeteo = openmeteo_requests.Client(session=cache_session)
 
 	url = "https://api.open-meteo.com/v1/forecast"

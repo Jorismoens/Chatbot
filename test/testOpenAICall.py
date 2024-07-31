@@ -1,6 +1,6 @@
 import unittest
 from typing import Literal
-from unittest.mock import patch, call
+from unittest.mock import patch
 
 from src.callAsistant import callAsistantWithTools
 from src.tools.toolSchemas import randomNumbersTool
@@ -104,7 +104,6 @@ class TestOpenAICall(unittest.TestCase):
         mock_choice = MockChoice(message=mock_message)
         mock_response = MockCompletion(choices=[mock_choice])
         mock_completions.return_value = mock_response
-
 
         actual_response = callAsistantWithTools(tools=[randomNumbersTool], prompt="Hi chatbot, how are you?",
                                                 role="You're a helpful assistant")
