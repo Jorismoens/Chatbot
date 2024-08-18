@@ -3,6 +3,7 @@ randomNumbersTool = {
     "function": {
         "name": "get_random_numbers",
         "description": "Generates a list of random numbers",
+        "strict": True,
         "parameters": {
             "type": "object",
             "properties": {
@@ -20,6 +21,7 @@ randomNumbersTool = {
                 }
             },
             "required": ["min", "max", "count"],
+            "additionalProperties": False
         }
     }
 }
@@ -29,6 +31,7 @@ temperatureTool = {
     "function": {
         "name": "get_temperature",
         "description": "Gives the temperature for a given location",
+        "strict": True,
         "parameters": {
             "type": "object",
             "properties": {
@@ -41,7 +44,8 @@ temperatureTool = {
                     "description": "The longitude of the location",
                 },
             },
-            "required": ["latitude, longitude"],
+            "required": ["latitude", "longitude"],
+            "additionalProperties": False
         }
     }
 }
